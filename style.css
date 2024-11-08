@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'Nunito';
-  src: local('Nunito Regular'), local('Nunito-Regular');
+  src: local('Nunito'), local('Nunito');
   src:
       url('$assets-nunito-regular-ttf') format('truetype'),
       url('$assets-nunito-regular-woff2') format('woff2'),
@@ -12,16 +12,6 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'Nunito';
-  src: local('Nunito Bold'), local('Nunito-Bold'),
-      url('$assets-nunito-bold-ttf') format('truetype'),
-      url('$assets-nunito-bold-woff2') format('woff2'),
-      url('$assets-nunito-bold-woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
 
 @font-face{
 	font-family: "Gochi Hand";
@@ -45,6 +35,10 @@ html {
 }
 
 body {
+  background-image: url($assets-background-1-png);
+  background-position: center;
+  background-size: cover;
+
   margin: 0;
   height: 100vh;
   display: flex;
@@ -54,7 +48,7 @@ body {
 main {
   display: block;
   flex: 1;
-  overflow: hidden;
+  overflow: auto;
 }
 
 h1 {
@@ -237,6 +231,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  overflow: hidden;
 }
 
 @media (min-width: 1024px) {
@@ -341,13 +336,13 @@ a:hover, a:active, a:focus {
   max-height: 100%;
   /* overflow: auto; */
   margin: 0 auto;
-  padding: 0 5%;
+  padding: 32px 5%;
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 1160px) {
   .container {
-    padding: 0;
+    padding: 32px;
     width: 90%;
   }
 }
@@ -672,7 +667,10 @@ ul {
 
 /***** Header *****/
 .header {
-  background-color: $brand_color;
+  background-color: transparent;
+  position: fixed;
+  margin-top: 50px; 
+  top: 0;
   width: 100vw;
   color: #fff;
 }
@@ -699,7 +697,7 @@ ul {
 }
 
 .logo img {
-  max-height: 37px;
+  max-height: 48px;
   vertical-align: middle;
 }
 
@@ -709,7 +707,8 @@ ul {
 }
 
 .logo a {
-  display: inline-block;
+  display: flex !important;
+  align-items: center;
 }
 
 .logo a:hover, .logo a:focus, .logo a:active {
@@ -717,8 +716,8 @@ ul {
 }
 
 .user-nav {
-  display: inline-block;
-  position: absolute;
+  display: flex;
+  align-items: center;
   white-space: nowrap;
 }
 @media (min-width: 768px) {
@@ -754,6 +753,7 @@ ul {
 .user-nav-list > li {
   display: inline-block;
 }
+
 
 @media (max-width: 768px) {
   .nav-wrapper-desktop {
@@ -1187,20 +1187,23 @@ ul {
 }
 
 /***** Hero component *****/
-.hero {
-  background-image: url($homepage_background_image);
+.search-hero {
+  /* background-image: url($assets-background-1-png); */
   background-position: center;
   background-size: cover;
-  height: 300px;
+  height: 500px;
   padding: 0 20px;
   text-align: center;
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
 }
 .hero-inner {
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  max-width: 610px;
+  width: 500px;
   margin: 0 auto;
 }
 
@@ -1603,7 +1606,7 @@ ul {
 
 .article-list-item {
   font-size: 16px;
-  padding: 15px 0;
+  /* padding: 15px 0; */
   text-overflow: ellipsis;
   overflow: hidden;
 }
@@ -4618,7 +4621,9 @@ html[dir=rtl] .notification-left-aligned {
   cursor: pointer;
   background: none;
   border: 0;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   padding: 0;
   text-align: initial;
   vertical-align: middle;
@@ -4627,7 +4632,9 @@ html[dir=rtl] .notification-left-aligned {
   text-decoration: none;
 }
 .dropdown-toggle > * {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 .dropdown-toggle[aria-expanded=true] + .dropdown-menu {
   display: block;

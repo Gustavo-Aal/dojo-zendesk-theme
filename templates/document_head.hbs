@@ -32,7 +32,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Titan+One&display=swap" rel="stylesheet"> --}}
 
-
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
 
 <script>
@@ -40,7 +40,38 @@
     corePlugins: {
       preflight: false,
     }
-  } 
+    plugins: [require("daisyui")],
+    daisyui: {
+      themes: themes: [
+      {
+        mytheme: {       
+          "primary": "#7b1fa2",       
+          "primary-content": "#fff",       
+          "secondary": "#ffcc33",       
+          "secondary-content": "#000",       
+          "accent": "#00bdb3",       
+          "accent-content": "#fff",       
+          "neutral": "#0d0001",       
+          "neutral-content": "#e5e7eb",       
+          "base-100": "#f7faff",       
+          "base-200": "#d7d9de",       
+          "base-300": "#b7babe",       
+          "base-content": "#151516",       
+          "info": "#10a8ff",       
+          "info-content": "#000a16",       
+          "success": "#00b883",       
+          "success-content": "#000c06",       
+          "warning": "#875c00",       
+          "warning-content": "#e7ddcf",       
+          "error": "#fa6770",       
+          "error-content": "#150404",
+          },
+        },
+      ],
+      base: false,
+      styled: false,
+    },
+  }
 </script>
 
 
