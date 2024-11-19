@@ -1,6 +1,6 @@
 <a class="skip-navigation" tabindex="1" href="#main-content">{{t 'skip_navigation' }}</a>
 
-<header class="header">
+<header class="header" id="header">
   <div>
     <div class="logo">
       {{#link 'help_center'}}
@@ -97,3 +97,21 @@
   </div>
 
 </header>
+
+
+<script>
+
+  document.addEventListener("wheel", ()=>{
+    const header = document.getElementById("header");
+    const content = document.getElementsByTagName("main")[0]
+    
+    if (content.scrollTop < 75) {
+      header.classList.add("top");
+      header.classList.remove("scrolled");
+    } else {
+      header.classList.add("scrolled");
+      header.classList.remove("top");
+    }
+  })
+
+</script>
