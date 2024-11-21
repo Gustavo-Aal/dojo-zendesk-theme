@@ -69,7 +69,8 @@ body {
 }
 
 main {
-  display: block;
+  display: flex;
+  flex-direction: column;
   flex: 1;
   overflow: auto;
 }
@@ -277,7 +278,7 @@ h6 {
 
 h1 {
   font-size: 32px !important;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #ddd;
 }
 
 h2 {
@@ -1336,7 +1337,8 @@ ul {
 .blocks-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
   list-style: none;
   padding: 0;
 }
@@ -1503,6 +1505,8 @@ ul {
 .recent-activity-header {
   margin-bottom: 10px;
   text-align: center;
+  font-family: "Gochi Hand";
+  font-size: 1.875rem !important;
 }
 .recent-activity-list {
   padding: 0;
@@ -1764,8 +1768,8 @@ ul {
   max-width: 100%;
   font-size: 4rem !important;
   margin: 0.25rem 0 !important;
-
 }
+
 @media (min-width: 768px) {
   .article-title {
     flex-basis: 100%; /* Take entire row */

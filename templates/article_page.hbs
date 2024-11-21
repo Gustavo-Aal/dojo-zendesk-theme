@@ -1,7 +1,11 @@
 <div class="container-divider"></div>
 {{!-- Search bar --}}
-<section class="search-hero h-[300px]">
-  <img src="{{asset 'dojo-branco.png'}}" class="h-[100px]">
+<section class="search-hero min-h-[300px]">
+
+  {{#link 'help_center'}}
+    <img src="{{asset 'dojo-branco.png'}}" class="h-[100px]">
+  {{/link}}
+
   <div class="hero-inner">
     <h2 class="visibility-hidden">{{ t 'search' }}</h2>
 
@@ -13,7 +17,7 @@
   </div>
 </section>
 {{!-- Content --}}
-<div class="bg-gray-100 mb-4 rounded-3xl flex-1">
+<div class="bg-gray-100 rounded-3xl flex-1">
   
 
   <div class="container bg-white">
