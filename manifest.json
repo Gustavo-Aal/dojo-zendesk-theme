@@ -1,7 +1,7 @@
 {
   "name": "dojo",
   "author": "Gustavo Aal",
-  "version": "4.3.3",
+  "version": "4.3.4",
   "api_version": 4,
   "default_locale": "en-us",
   "settings": [
@@ -48,7 +48,7 @@
           "type": "color",
           "description": "visited_link_color_description",
           "label": "visited_link_color_label",
-          "value": "#9358B0"
+          "value": "#000"
         },
         {
           "identifier": "background_color",
